@@ -11,151 +11,101 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
-            <!--Card -->
-            <LinearLayout
-                android:layout_width="400dp"
-                android:layout_height="475dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/weather_widget"
-                android:orientation="vertical">
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuaca"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/Poppins_SemiBold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                />
+            
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="23 Mei 2025"
+                android:textStyle="normal"
+                android:fontFamily="@font/Poppins_Regular"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                />
 
-                <!--Title Row-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:text="TextView"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="-5dp"
-                        android:fontStyle="normal"
-                        android:fontWeight="300"
-                        android:text="TextView"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-                </LinearLayout>
-                <!--Title Row-->
-
-                <!--Degree Row-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <!--Number and Degree Row-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="225dp"
-                        android:orientation="horizontal"
-                        android:paddingLeft="80dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="0dp"
-                            android:fontStyle="normal"
-                            android:text="20"
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textFontWeight="900"
-                            android:textSize="200sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="-125dp"
-                            android:fontStyle="normal"
-                            android:text="°C "
-                            android:textAlignment="center"
-                            android:textColor="@color/white"
-                            android:textFontWeight="900"
-                            android:textSize="24dp" />
-                    </LinearLayout>
-                    <!--Number and Degree Row-->
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/Poppins_SemiBoldItalic"
-                        android:fontStyle="italic"
-                        android:text="Like freshly cooked Takoyaki."
-                        android:textAlignment="center"
-                        android:textColor="@color/text"
-                        android:textSize="18sp" />
-                </LinearLayout>
-                <!--Degree Row-->
-
-                <!--Location Row-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/Poppins_Light"
-                        android:fontStyle="normal"
-                        android:text="TextView"
-                        android:textAlignment="center"
-                        android:textColor="@color/text"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="TextView"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-                <!--Location Row-->
-            </LinearLayout>
-            <!--Card -->
-
-            <!--Widgets Container-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_margin="16dp"
+                android:background="@drawable/weather_card"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <!--Widgets Row-->
-                <LinearLayout
-                    android:layout_width="75dp"
+                <ImageView
+                    android:id="@+id/imageview1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical">
-                    
-                </LinearLayout>
-                <!--Widgets Row-->
+                    android:src="@drawable/cloudy_sunny"
+                    />
 
+                <TextView
+                    android:id="@+id/weather_status_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mostly Cloudy"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/weather_degree_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="25°"
+                    android:textSize="43sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/weather_stat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="H : 27  L : 18"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_margin="16dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/umbrella"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
-            <!--Widgets Container-->
+
         </LinearLayout>
     </ScrollView>
 
